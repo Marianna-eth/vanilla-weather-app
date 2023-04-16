@@ -11,26 +11,50 @@
       integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
       crossorigin="anonymous"
     />
-     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/style.css" />
     <title>Weather App</title>
   </head>
   <div class="container">
     <div class="weather-app-wrapper">
       <div class="weather-app">
+        <form id="search-form" class="mb-3">
+          <div class="row">
+            <div class="col-9">
+              <input
+                type="search"
+                placeholder="Type a city..."
+                class="form-control"
+                id="city-input"
+                autocomplete="off"
+              />
+            </div>
+            <div class="col-3">
+              <input
+                type="submit"
+                value="Search"
+                class="btn btn-primary w-100"
+              />
+            </div>
+          </div>
+        </form>
+
         <h1 id="city"></h1>
         <ul>
-       <li>Last updated: <span id="date"></span></li>
+          <li>Last updated: <span id="date"></span></li>
           <li id="description"></li>
         </ul>
         <div class="row">
           <div class="col-6">
-
-<div class="d-flex weather-temperature">
-  <img src="https://ssl.gstatic.com/onebox/weather/64/sunny.png" alt="Clear" id="icon" />
-  <strong id="temperature"></strong>°C | °F
-</div>
-
+            <div class="d-flex weather-temperature">
+              <img
+                src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
+                alt="Clear"
+                id="icon"
+              />
+              <strong id="temperature"></strong>°C | °F
+            </div>
+          </div>
 
           <div class="col-6">
             <ul>
@@ -41,15 +65,15 @@
         </div>
       </div>
     </div>
-     <small>
-        <a
-          href="https://github.com/Marianna-eth/vanilla-weather-app"
-          target="_blank"
-        >
-          Open-source code
-        </a>
-        by Matt Delac
-      </small>
+    <small>
+      <a
+        href="https://github.com/Marianna-eth/vanilla-weather-app"
+        target="_blank"
+      >
+        Open-source code
+      </a>
+      by Marianna
+    </small>
   </div>
   <body>
     <script src="src/app.js"></script>
